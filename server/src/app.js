@@ -2,7 +2,7 @@ const { exec } = require('child_process');
 const router = require('./router')
 const { SERVER, express, ODM, MONGO_DB_HOST, bodyParser, morgan, hash, STATIC_RESOURCES_PATH } = require('./rules')
 
-require('./model/all-models') /* get all the models */
+require('./all-models') /* generate all the models */
 
 const app = express()
 ODM.connect(MONGO_DB_HOST)

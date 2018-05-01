@@ -1,4 +1,4 @@
-const report = require('./report')
+const report = require('./report/report.model')
 
 const allModels = {
     report

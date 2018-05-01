@@ -6,6 +6,8 @@ Well you sit down and write what you were going to deliver in a standup. Its opp
 
 This serves the data and application logic.
 
+Using feature based directory composition for server.
+
 ## client
 
 There can be multiple applications: chrome-extension, web, electron app?! Sky is the limit.
