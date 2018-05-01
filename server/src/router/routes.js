@@ -1,17 +1,21 @@
-const handler = require('./handler')
+const report = require('../report/report.routes')
+const reports = require('../reports/reports.routes')
+
+/**
+ * Handles the default path /, modify for extending help.
+ * @param {Request} request
+ * @param {Response} response
+ */
+const serveHelp = (request, response) => {
+    console.log(`Handling ${request.url} at Date.now()`)
+    response.status(200)
+    response.send(`Hello there. This is sitdowns application.`)
+}
 
 const routes = [
-    { path: '/', controllers: routed => routed.get(handler.serveHelp) },
-    { path: '/report/:id', controllers: routed => routed.get(handler.report.get) },
-    { path: '/report/new', controllers: routed => routed.post(handler.report.post) },
-    { path: '/report/update', controllers: routed => routed.put(handler.report.put) },
-    { path: '/report/delete', controllers: routed => routed.delete(handler.report.delete) },
-    { path: '/reports/new', controllers: routed => routed.post(handler.reports.get) }
+    { path: '/', controllers: routed => routed.get(serveHelp) },
+    ...report,
+    ...reports
 ]
 
-const locations = routes.map(route => route.path)
-
-module.exports = {
-    routes,
-    locations
-}
+module.exports = routes
