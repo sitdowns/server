@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "210f32fd-b5ec-4035-8713-0d2cd6d887cf",
+		"name": "sitdowns",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:54321/report/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:54321/report/5ae89463ebca671bf73372c0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "54321",
+					"path": [
+						"report",
+						"5ae89463ebca671bf73372c0"
+					]
+				},
+				"description": "example of id = 5ae89463ebca671bf73372c0\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:54321/report/new",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "did",
+							"value": "[\"enjoyed heavy rain\"]",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "doing",
+							"value": "[\"this app\"]",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "blocked",
+							"value": "[\"on my own stupidity\"]",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "pin",
+							"value": "99990000",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:54321/report/new",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "54321",
+					"path": [
+						"report",
+						"new"
+					]
+				},
+				"description": "Create a sitdown"
+			},
+			"response": []
+		}
+	]
+}
