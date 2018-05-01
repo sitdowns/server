@@ -1,4 +1,4 @@
-import { Schema, ODM } from '../rules'
+const { Schema, ODM, DB } = require('../rules')
 
 const reportSchema = new Schema({
     name: String,
@@ -11,6 +11,9 @@ const reportSchema = new Schema({
     timestamp: { type: Date, default: Date.now }
 })
 
-ODM.model('Report', reportSchema)
+const modelName = 'Report'
+DB.Models[modelName] = ODM.model(modelName, reportSchema)
+DB.Schemas[modelName] = reportSchema
+console.info(`Setting up schema and model: DB.Models.${modelName}`)
 
 module.exports = reportSchema

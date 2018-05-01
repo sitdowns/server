@@ -12,6 +12,11 @@ const morgan = require('morgan')
 const MONGO_DB_HOST = process.env.MONGO_DB_HOST || 'mongodb://localhost/sitdowns'
 const STATIC_RESOURCES_PATH = process.env.STATIC_RESOURCES_PATH || '../../static'
 
+const DB = {
+    Models: {},
+    Schemas: {}
+}
+
 // const hash = {
 //     rounds: 31,
 //     minor: 'b',
@@ -38,6 +43,7 @@ const toexport = {
     SERVER,
     MONGO_DB_HOST,
     STATIC_RESOURCES_PATH,
+    DB,
     // hash,
     // session,
     // cookieParser,

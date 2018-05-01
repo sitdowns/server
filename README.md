@@ -9,3 +9,12 @@ This serves the data and application logic.
 ## client
 
 There can be multiple applications: chrome-extension, web, electron app?! Sky is the limit.
+
+
+
+## Requirements for repo
+
+1. VS Code
+2. .editorconfig plugin
+3. global installation of jasmine (for quick `jasmine` from console)
+4. Default option+shift+F for quick code formatting.
