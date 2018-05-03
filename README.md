@@ -1,8 +1,8 @@
-# sitdowns
+# sitdowns/server
 
 Well you sit down and write what you were going to deliver in a standup. Its opposite of a standup, get it? Sitdown.
 
-## server
+## server application
 
 This serves the data and application logic.
 
@@ -10,9 +10,9 @@ Using feature based directory composition for server.
 
 ## client
 
+These live in their own repositories.
+
 There can be multiple applications: chrome-extension, web, electron app?! Sky is the limit.
-
-
 
 ## Requirements for repo
 
