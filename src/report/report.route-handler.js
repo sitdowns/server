@@ -57,8 +57,19 @@ const report = {
         })
     },
     delete: (request, response) => {
-        response.status(200)
-        response.send('/report/delete')
+        if (!request.params.id) {
+            response.status(400)
+            return response.send('Need id in url.')
+        }
+        businessRules.deleteById(request.params.id, err => {
+            if (err) {
+                console.error(err)
+                response.status(500)
+                return response.send('Server failed.')
+            }
+            response.status(200)
+            response.json(`${request.params.id} removed.`)
+        })
     }
 }
 

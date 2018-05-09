@@ -4,7 +4,7 @@ const routes = [
     { path: '/report/:id', controllers: routed => routed.get(handler.get) },
     { path: '/report/new', controllers: routed => routed.post(handler.post) },
     { path: '/report/:id/update', controllers: routed => routed.put(handler.put) },
-    { path: '/report/delete', controllers: routed => routed.delete(handler.delete) }
+    { path: '/report/:id/delete', controllers: routed => routed.delete(handler.delete) }
 ]
 
 module.exports = routes

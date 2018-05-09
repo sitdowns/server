@@ -20,10 +20,13 @@ const update = (id, requestData, callback) => DB.Models[MODEL_NAME].findOne({ _i
     return callback(null, doc)
 })
 
+const deleteById = (id, callback) => DB.Models[MODEL_NAME].remove({_id: id}, callback)
+
 const report = {
     getById,
     save,
-    update
+    update,
+    deleteById
 }
 
 module.exports = report
