@@ -87,6 +87,64 @@
 				"description": "Create a sitdown"
 			},
 			"response": []
+		},
+		{
+			"name": "update - report - http://127.0.0.1:54321/report/5ae89463ebca671bf73372c0/update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "did",
+							"value": "[\"enjoyed heavy rain\"]",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "doing",
+							"value": "[\"this app\"]",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "blocked",
+							"value": "[\"on my own challenges\"]",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "pin",
+							"value": "12121212",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:54321/report/5ae89463ebca671bf73372c0/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "54321",
+					"path": [
+						"report",
+						"5ae89463ebca671bf73372c0",
+						"update"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
