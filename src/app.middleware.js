@@ -1,5 +1,5 @@
 const logUrlWithTime = (request, response, next) => {
-    console.log(`Recieved request to serve ${request.url} at ${new Date()}`)
+    console.log(`Request ${request.method} ${request.url} ${new Date()}`)
     next()
 }
 

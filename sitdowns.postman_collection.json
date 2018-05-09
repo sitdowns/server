@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://127.0.0.1:54321/report/5ae89463ebca671bf73372c0",
+					"raw": "http://127.0.0.1:54321/report/5af31a0bf3d691f7062fac2e",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -23,7 +23,7 @@
 					"port": "54321",
 					"path": [
 						"report",
-						"5ae89463ebca671bf73372c0"
+						"5af31a0bf3d691f7062fac2e"
 					]
 				},
 				"description": "example of id = 5ae89463ebca671bf73372c0\n"
@@ -63,7 +63,7 @@
 						},
 						{
 							"key": "pin",
-							"value": "99990000",
+							"value": "123",
 							"description": "",
 							"type": "text"
 						}
@@ -121,14 +121,14 @@
 						},
 						{
 							"key": "pin",
-							"value": "12121212",
+							"value": "1313",
 							"description": "",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://127.0.0.1:54321/report/5ae89463ebca671bf73372c0/update",
+					"raw": "http://127.0.0.1:54321/report/5af31a0bf3d691f7062fac2e",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -139,8 +139,54 @@
 					"port": "54321",
 					"path": [
 						"report",
-						"5ae89463ebca671bf73372c0",
-						"update"
+						"5af31a0bf3d691f7062fac2e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete - report - http://127.0.0.1:54321/report/5ae97be486c175790372eb9a/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:54321/report/5af31a0bf3d691f7062fac2e",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "54321",
+					"path": [
+						"report",
+						"5af31a0bf3d691f7062fac2e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get - reports - http://127.0.0.1:54321/reports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:54321/reports",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "54321",
+					"path": [
+						"reports"
 					]
 				}
 			},

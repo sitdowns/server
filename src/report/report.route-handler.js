@@ -46,7 +46,7 @@ const report = {
             response.status(400)
             return response.send('Need id in url.')
         }
-        businessRules.update(request.params.id, request.body, (err, data) => {
+        businessRules.updateById(request.params.id, request.body, (err, data) => {
             if (err) {
                 console.error(err)
                 response.status(500)
