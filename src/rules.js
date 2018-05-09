@@ -8,6 +8,7 @@ const ODM = require('mongoose')
 const Schema = ODM.Schema
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
+const localMiddleware = require('./app.middleware')
 
 const MONGO_DB_HOST = process.env.MONGO_DB_HOST || 'mongodb://localhost/sitdowns'
 const STATIC_RESOURCES_PATH = process.env.STATIC_RESOURCES_PATH || '../../static'
@@ -39,11 +40,12 @@ const toexport = {
     morgan,
     express,
     bodyParser,
+    localMiddleware,
     ODM,
     SERVER,
     MONGO_DB_HOST,
     STATIC_RESOURCES_PATH,
-    DB,
+    DB
     // hash,
     // session,
     // cookieParser,
